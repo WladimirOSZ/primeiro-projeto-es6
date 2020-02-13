@@ -113,7 +113,32 @@
             var n1 = 5;
             var result = (n1 >= 10) ? 10 : 0;
             console.log(result);
+
+            // Objeto
+            var person = {
+                name: "Maria",
+                sexo: "feminino",
+                idade: 27,
+                endereco: {
+                    rua: "Rua Vinte e Quatro",
+                    numero: 123,
+                    referencias: ["perto da antena", "Do lado da loja x"]
+                }
+            };
             
+            person.name = "Maria da Silva Ferreira";
+
+            console.log(person.idade);
+            console.log(person.endereco.rua);
+            console.log(person);
+
+
+            var nome = person["nome"];  // person.nome 
+            var propriedade = "endereco";
+            var rua = person[propriedade]["rua"]; // person.endereco.rua
+            console.log(nome + "\n " + rua);
+            console.log(person.endereco.referencias[1]);
+            console.log(person["endereco"].referencias[1]);
 
         </script>
     </body>
