@@ -123,8 +123,13 @@
                     rua: "Rua Vinte e Quatro",
                     numero: 123,
                     referencias: ["perto da antena", "Do lado da loja x"]
+                },
+                display: function(){
+                    console.log("oi meus caros amiguitos");
                 }
             };
+
+            person.display();
             
             person.name = "Maria da Silva Ferreira";
 
@@ -139,6 +144,83 @@
             console.log(nome + "\n " + rua);
             console.log(person.endereco.referencias[1]);
             console.log(person["endereco"].referencias[1]);
+
+            // Funções
+            function printMessage(mensagem){
+                if(!mensagem){
+                    console.log("Sem mensagem");
+                }else{
+                    console.log(mensagem);
+                }
+            }
+
+            printMessage();
+
+            function calculate(n1, n2){
+                return n1 * n2;
+            }
+
+            printMessage(calculate(20,30));
+
+
+            // Criando fuções como variáveis
+
+            var printMessage2 = function (message) {
+                console.log("Texto: " + message);
+            }
+
+            printMessage2();
+
+            var calculate2 = function (n1, n2){
+                printMessage2("Olá, tudo bem?");
+                var color = "azul";
+                return n1 / n2;
+            }
+
+            // Cria uma função que recebe um valor (mensagem) como parametro,
+            // e usa a função responsável por imprimir uma mensagem
+            var print = function(value, printFunction, user){
+            //    console.log(printFunction);
+                printFunction(value);
+                console.log(user);
+                user.display();
+            }
+
+            print("Alohomora",printMessage2, person);
+
+            var array = [1, 2, 3, 47, 90, -1];
+            var count = 0;
+            while(count <= 2){
+                console.log("Count = " + count);
+                count++; // count = count +1;
+            }
+
+            var count2 = 0;
+            do{
+                console.log("Count2 = " + count2);
+                count2++;
+            }while(count2 <= 2);
+
+            for(var i = 0; i<4; i++){
+                console.log("i = " + i);
+            }
+            
+            console.log("For decrescente: ");
+            for(var i =50; i>= 20;i -= 10){
+                console.log("i = " + i);
+            }
+
+            //variavel++ -> primeiro usa o valor da variável e depois faz o acréscimo
+            var linha = 1;
+            console.log("Linha =", linha++);
+            console.log("Lnha após = ", linha); 
+
+            // ++variável -> primeiro faz o acréscimo e só depois usa a variável
+            var coluna = 1;
+            console.log("Coluna =", ++coluna);
+            console.log("Coluna após = ", ++coluna); 
+            
+
 
         </script>
     </body>
