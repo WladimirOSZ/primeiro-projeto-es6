@@ -1,40 +1,21 @@
-class List{
-    constructor(){
-        this.data=[];
-    }
-    add(value){
-        this.data.push(value);
-        console.log(this.data);
-    }
-    pop(){
-        this.data.pop();
-        this.print();
-    }
-    print(){
-        console.log(this.data);
-    }
-}
+const nomeVariavel="João";
 
-class TodoList extends List{//Herança
-    print(){
-        console.log("Imprimindo todo list");
-        super.print();
-    }
-}
+// Objeto
+const usuario = { nome: 'Jesus', idade: 98};
 
-class Matematica{
-    static soma(valueA, valueB){
-        return valueA+valueB;
-    }
-}
+usuario.nome='Maria';
 
-console.log(Matematica.soma(5,7));
+console.log(usuario);
 
-const minhaLista = new TodoList();
+const meuVetor = [1,2,3,4,5];
+meuVetor[0]=90;
+meuVetor[2]=93;
 
-document.getElementById('novoTodo').onclick=function(){
-    minhaLista.add('FRIFASS D213');
-}
-document.getElementById('remove').onclick=function(){
-    minhaLista.pop();
-}
+console.log(meuVetor);
+
+//Variável do tipo let
+let valor = 3;
+let nome = 'Claudia Let';
+let altura = 1.86;
+let contemValor=true;
+
