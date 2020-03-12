@@ -1,9 +1,20 @@
-function somar(valorA, valorB=10){//Esse valorB=10 é caso o valor B não seja passado, ele vai entrar como 10
-    console.log(valorA+valorB);
-}
+const usuario = {
+    nome: 'Jordan',
+    idade: 24,
+    endereco: {
+        cidade: 'Ituiutaba',
+        estado: 'MG'
+    }
+};
 
-somar (10,11);
+console.log(usuario);
+/*
+let nome = usuario.nome;
+let idade = usuario.idade;
+let cidade = usuario.cidade;
 
-const soma = (valorA, valorB = 10) => valorA+valorB;
+console.log(nome, idade, cidade);
+*/
 
-console.log(soma(5));
+const{nome, idade, endereco: {cidade}} = usuario;
+console.log(nome, idade, cidade);
