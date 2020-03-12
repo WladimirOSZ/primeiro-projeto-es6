@@ -1,54 +1,22 @@
-// Operações com array em ES6+
+//Arros Functions
 const array = [1,3,4,5,8,9];
 
-//Percorre todos os itens do vetor e executa determinada ação para ele como retorno
-const novoArray=array.map(function(item,index){
-    return item+index;
-});
-console.log(novoArray);
-//Reduce: consumir todo o vetor e transformar em uma única informação (geralmente número);
-const soma = array.reduce(function(total,proximoValor){
-    return total+proximoValor;
-});
+const novoArray = array.map((item)=> item * 2);
 
-console.log(soma);
-/* 
-    Execução:
-    total: 0 próximo: 1
-    total: 1 próximo: 3
-    total: 4 próximo: 4
+/*
+    1. Remove a keyword function
+    2. Colocar a flecha -=> entre o parentese e a chave
+    3. A funcção recebe parâmero?
+        sim
+            3.1 remove o parentese por volta do parâmetro
+            3.2 a função retorna apenas uma informação ( 1 linha de retorno);
+            3.3 colocar diretamente depois da flecha (sem chaves)
 */
 
-//Filter: filtrar somente os itens que queremos
-const filterPares = array.filter(function(item){
-    /* if(item%2==0){
-        return true;
-    }else{
-        return false;
-    }
-    */
-    return item % 2 ===0;
-});
+const teste = () => {
+    console.log('oi');
+};//Não é recomendado fazer isso!!!!!!!!!!!!!!!!
 
-const novosUsuarios=array.filter(function(usuario){
-    return usuario.idade>=15;
-})
+const teste2 = () => [1,2,3,];
 
-console.log(filterPares);
-
-
-//Find
-
-const find = array.find(function(item){
-    return item ===4;
-});
-
-if(find){
-    console.log(find);
-}
-
-//forEach
-novosUsuarios.forEach(function(item,index){
-    console.log(item);
-});
-
+const teste3 = () => ({nome: 'João das neves', idade: 10});
